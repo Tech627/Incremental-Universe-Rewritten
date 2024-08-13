@@ -1,0 +1,85 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title> Incremental Universe Rewritten </title>
+</head>
+<body>
+    <div id="Matter"> You have <span id="Matter-num">0</span> Matter </div>
+    <div id="Matter-persec"> (+0 Matter/sec) </div>
+    <div class="realms">
+        <div class="realm" id="Matter-realm" onclick="EnterMatterRealm()"></div>
+    </div>
+    <div class="realm-content">
+        <div id="Section-1"> [Generators] </div>
+        <div id="Section1-content">
+            <div id="Matter-gen" onclick="BuyMatterGen()">
+                <div id="gen-name"> Matter Generator [0] </div>
+                <div id="gen-description"> Gives +1 Matter/sec </div>
+                <div id="gen-cost"> Cost: 10 Matter </div>
+            </div>
+            <div id="Matter-boost" onclick="BuyMatterBoost()">
+                <div id="boost-name"> Generator Booster [0] </div>
+                <div id="boost-description"> Gives 1x mult to Matter Generators </div>
+                <div id="boost-cost"> Cost: 100 Matter </div>
+            </div>
+            <div id="Matter-raiser" onclick="BuyMatterRaiser()">
+                <div id="raiser-name"> Booster Raiser [0] </div>
+                <div id="raiser-description"> Gives ^1.00 to Generator Boosters </div>
+                <div id="raiser-cost"> Cost: 1e3 Matter </div>
+            </div>
+        </div>
+        <div class="realm" id="Exit-realm" onclick="ExitRealm()"></div>
+        <div id="Section-2"> [Matter Milestones] </div>
+        <div id="Section2-content">
+            <div class="Matter-milestone" id="mm1">
+                <div id="Milestone-name"> [Matter Milestone 1] </div>
+                <div id="Milestone-desc"> Your Matter Generator gets a 1.5x mult </div>
+            </div>
+            <div class="Matter-milestone" id="mm2"> 
+                <div id="Milestone-name"> [Matter Milestone 2] </div>
+                <div id="Milestone-desc"> Unlock Generator Booster </div>
+            </div>
+            <div class="Matter-milestone" id="mm3">
+                <div id="Milestone-name"> [Matter Milestone 3] </div>
+                <div id="Milestone-desc"> Your Matter gets a 1.1x mult </div>
+            </div>
+            <div class="Matter-milestone" id="mm4">
+                <div id="Milestone-name"> [Matter Milestone 4] </div>
+                <div id="Milestone-desc"> Unlock Booster Raiser </div>
+            </div>
+            <div class="Matter-milestone" id="mm5">
+                <div id="Milestone-name"> [Matter Milestone 5] </div>
+                <div id="Milestone-desc"> Your Matter Booster gets a 1.05x mult </div>
+            </div>
+            <div class="Matter-milestone" id="mm6">
+                <div id="Milestone-name"> [Matter Milestone 6] </div>
+                <div id="Milestone-desc"> Your Matter Generator gets a mult based on log10(Matter) </div>
+            </div>
+            <div class="Matter-milestone" id="mm7">
+                <div id="Milestone-name"> [Matter Milestone 7] </div>
+                <div id="Milestone-desc"> Unlock Universal Collapse </div>
+            </div>
+        </div>
+        <div id="Matter-milestone-reset" onclick="BuyMatterMilestone()">
+            <div id="mmr-desc"> Reset your Matter for a Milestone </div>
+            <div id="mmr-req"> Req: 50 Matter </div>
+        </div>
+        <div id="Section-3"> [Universal Collapse] </div>
+        <div id="Section3-content">
+            <div id="UC-currency"> You have <span id="Collapsed-txt">0</span> Collapsed Matter </div>
+            <div id="UC-eff"> Your <span id="Collapsed-txt">Collapsed</span> Matter gives a <span id="CM-eff">1x</span> mult to your Matter. </div>
+            <div id="UC-reset" onclick="GetCollapsedMatter()">
+                <div id="UCr-desc"> Reset Your Matter and Generators to gain Collapsed Matter </div>
+                <div id="UCr-gain"> +0 Collapsed Matter on reset </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="JS/break_eternity.js"></script>
+<script src="JS/numberformmating.js"></script>
+<script src="JS/main.js"></script>
+<script src="JS/realmsopener.js"></script>
+<script src="JS/GameLoop.js"></script>
+</html>
