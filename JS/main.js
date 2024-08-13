@@ -82,7 +82,7 @@ function BuyMatterRaiser() {
 }
 
 function BuyMatterMilestone() {
-    if(player.Matter.gte(Matter_Milestones.req) && Matter_Milestones.amt.gte(8)) {
+    if(player.Matter.gte(Matter_Milestones.req) && Matter_Milestones.amt.lt(8)) {
         player.Matter = player.Matter.sub(player.Matter)
         Matter_Milestones.amt = Matter_Milestones.amt.add(1)
     }
